@@ -61,6 +61,7 @@
 ### Config Files
 `nano -w /etc/fstab` το αρχείο απο την πρώτη εικόνα πρέπει να το επεξεργαστείτε έτσι ώστε να γίνει όπως στην δεύτερη εικόνα 
 ![nano](https://user-images.githubusercontent.com/92797427/220631516-af10a8cb-74e7-4649-a08b-3b302df7e787.png)
+για να βγούμε από το nano: ctrl+x, Y, >_*enter*_<
 `rm -f /etc/localtime`
 `ln -sf /usr/share/zoneinfo/Europe/Athens /etc/localtime`
 
