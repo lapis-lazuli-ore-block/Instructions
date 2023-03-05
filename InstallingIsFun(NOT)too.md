@@ -62,11 +62,15 @@
 `nano -w /etc/fstab` το αρχείο απο την πρώτη εικόνα πρέπει να το επεξεργαστείτε έτσι ώστε να γίνει όπως στην δεύτερη εικόνα 
 ![nano](https://user-images.githubusercontent.com/92797427/220631516-af10a8cb-74e7-4649-a08b-3b302df7e787.png)
 για να βγούμε από το nano: ctrl+x, Y, >_*enter*_<
+
 `rm -f /etc/localtime`
+
 `ln -sf /usr/share/zoneinfo/Europe/Athens /etc/localtime`
 
 
 ### System Update
+
+> _*Η παρακάτω εντολή θα πάρει πολύ ώρα και λογικά θα κάνει τον υπολογιστή σαν να κολλάει για περίπου 2 ή περισσότερες ώρες*_
 `emerge -q -auDN @world`
 
 ### Bootloader
@@ -74,16 +78,16 @@
 `grub-install --target=i386-pc --no-floppy /dev/sda`
 `ego boot update`
 
-### Network Set Up 
-Ethernet
-1. `rc-update add dhcpcd default`
-2. `nano /etc/conf.d/hostname` και αλλάζουμε το hostname
+### Ethernet Set Up 
+
+`rc-update add dhcpcd default`
+`nano /etc/conf.d/hostname` και αλλάζουμε το hostname
 
 ### Setting Users
-1. `passwd` κωδικός για τον root user
-2. `useradd -m βάλτεΤονΑΜσαςΕδώ`
-4. `usermod -G wheel,audio,video,plugdev,portage myuser`
-5. `passwd myuser`
+`passwd` κωδικός για τον root user
+`useradd -m βάλτεΤονΑΜσαςΕδώ`
+`usermod -G wheel,audio,video,plugdev,portage myuser`
+`passwd myuser`
 
 ### Exit Environment and Reboot
 `exit`
@@ -95,10 +99,11 @@ Ethernet
 
 ![storage](https://user-images.githubusercontent.com/77148351/220625668-b513b877-5100-4a39-9ea5-91a11079226d.png)
 
-### Post Installation Configuration
-Σε αυτό το σημείο καλό είναι να σετάρουμε τα sudo privilege του user μας.
-Για να το καταφέρουμε αυτό θα χρειαστεί να κατεβάσουμε το sudo package.
-`su` και βάζουμε τον κωδικό του root user
+Boot-άρουμε το VM μας για πρώτη φορα!!!!
+
+οι πρώτες εντολές
+
+`su` και κωδικό του root user που βάλαμε πριν
 `emerge --ask app-admin/sudo`
 
 Φτάσατε στο Τέλος...
