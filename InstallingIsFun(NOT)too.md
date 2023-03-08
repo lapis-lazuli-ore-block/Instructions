@@ -44,13 +44,13 @@
 
 `2023-01-31`
 
-επιλέγουμε `kde-stage3-generic_64-next-2023-01-31.tar.xz` 
+επιλέγουμε `lxqt-stage3-generic_64-next-2023-01-31.tar.xz` 
 και >_*enter*_ [Save] >_*enter*_ για να κατεβάσουμε το αρχείο που είναι μεγέθους 2.0 GB
 
 `q` για να βγούμε απ το `links`
 
 ### extract του αρχείου που κατεβάσαμε
-`tar --numeric-owner --xattrs --xattrs-include='*' -xpf kde-stage3-generic_64-next-2023-01-31.tar.xz` 
+`tar --numeric-owner --xattrs --xattrs-include='*' -xpf lxqt-stage3-generic_64-next-2023-01-31.tar.xz` 
 
 ### Chroot
 `fchroot /mnt/funtoo /bin/bash --login`
