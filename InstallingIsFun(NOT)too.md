@@ -75,25 +75,35 @@
 
 ### Bootloader
 `emerge -av grub`
+
 `grub-install --target=i386-pc --no-floppy /dev/sda`
+
 `ego boot update`
 
 ### Ethernet Set Up 
 
 `rc-update add dhcpcd default`
+
 `nano /etc/conf.d/hostname` και αλλάζουμε το hostname
 
 ### Setting Users
 `passwd` κωδικός για τον root user
+
 `useradd -m βάλτεΤονΑΜσαςΕδώ`
+
 `usermod -G wheel,audio,video,plugdev,portage myuser`
+
 `passwd myuser`
 
 ### Exit Environment and Reboot
 `exit`
+
 `cd /mnt`
+
 `umount -lR funtoo`
+
 `shutdown` για να επιστρέψουμε στη αρχική του livecd
+
 Τερματίζουμε το vm μας
 Από τις ρυθμίσεις του VM στο storage αφαιρούμε το livecd απο το "IDE Secondary Device" 
 
